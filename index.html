@@ -140,59 +140,16 @@
         </div>
     </section>
 
-    <!-- Contact / Interest Form -->
+    <!-- Call to Action / Participate -->
     <section id="contato" class="py-24 px-4 bg-[#F2EDE4]">
-        <div class="max-w-7xl mx-auto">
-            <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl grid lg:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6">Deseja participar do Motherly Plus?</h2>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Preencha o formulário e nossa equipe de pesquisadores entrará em contato para explicar os próximos passos e critérios de participação.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 text-gray-700">
-                            <i data-lucide="check-circle" class="text-motherly-sage"></i>
-                            <span>Acompanhamento profissional</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-gray-700">
-                            <i data-lucide="check-circle" class="text-motherly-sage"></i>
-                            <span>Sigilo absoluto de dados</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-gray-700">
-                            <i data-lucide="check-circle" class="text-motherly-sage"></i>
-                            <span>Contribuição para a saúde materna</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <form id="interestForm" class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-semibold mb-2">Nome Completo</label>
-                            <input type="text" class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-motherly-sage transition-all" placeholder="Seu nome aqui">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold mb-2">E-mail</label>
-                            <input type="email" class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-motherly-sage transition-all" placeholder="exemplo@email.com">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold mb-2">Idade do seu filho(a)</label>
-                            <select class="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-motherly-sage transition-all bg-white">
-                                <option>Gestante</option>
-                                <option>0 a 6 meses</option>
-                                <option>6 a 12 meses</option>
-                                <option>1 a 3 anos</option>
-                                <option>Mais de 3 anos</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="w-full bg-motherly-sage text-white p-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all shadow-md">
-                            Enviar meu Interesse
-                        </button>
-                    </form>
-                    <div id="successMessage" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-xl text-center font-medium">
-                        Obrigado! Recebemos seu interesse e entraremos em contato em breve.
-                    </div>
-                </div>
-            </div>
+        <div class="max-w-4xl mx-auto text-center bg-white rounded-[3rem] p-8 md:p-16 shadow-xl">
+            <h2 class="text-4xl font-bold mb-6">Participe do estudo</h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                Clique no botão para participar.
+            </p>
+            <a href="https://redcap.hc.fm.usp.br/surveys/?s=4TWX3TXD8LFYRX4C" target="_blank" rel="noopener noreferrer" class="inline-block bg-motherly-sage text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 hover:shadow-lg transition-all shadow-md">
+                Participar
+            </a>
         </div>
     </section>
 
@@ -226,19 +183,6 @@
 
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        });
-
-        // Simple Form Submission UI
-        const form = document.getElementById('interestForm');
-        const successMsg = document.getElementById('successMessage');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            form.classList.add('hidden');
-            successMsg.classList.remove('hidden');
-            
-            // Aqui você conectaria com algum backend ou planilha
-            console.log("Formulário enviado com sucesso!");
         });
     </script>
 </body>
