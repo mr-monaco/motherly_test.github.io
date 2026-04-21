@@ -31,33 +31,38 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 bg-motherly-sage rounded-full flex items-center justify-center text-white">
-                        <i data-lucide="heart" class="w-6 h-6"></i>
-                    </div>
-                    <span class="text-2xl font-bold tracking-tight text-motherly-dark">Motherly<span class="text-motherly-sage">Plus</span></span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-motherly-sage rounded-full flex items-center justify-center text-white">
+                    <i data-lucide="heart" class="w-6 h-6"></i>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium">
-                    <a href="#inicio" class="hover:text-motherly-sage transition-all">Início</a>
-                    <a href="#sobre" class="hover:text-motherly-sage transition-all">O Estudo</a>
-                    <a href="#equipe" class="hover:text-motherly-sage transition-all">Equipe</a>
-                    <a href="#participe" class="bg-motherly-sage text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition-all">Participar</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button"><i data-lucide="menu"></i></button>
-                </div>
+                <span class="text-2xl font-bold tracking-tight text-motherly-dark">Motherly<span class="text-motherly-sage">Plus</span></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-motherly-sage transition-all">Início</a>
+                <a href="#sobre" class="hover:text-motherly-sage transition-all">O Estudo</a>
+                <a href="#equipe" class="hover:text-motherly-sage transition-all">Equipe</a>
+                <a href="#participacao" class="hover:text-motherly-sage transition-all">Participação</a>
+                <a href="#beneficios" class="hover:text-motherly-sage transition-all">Benefícios</a>
+                <a href="#participe" class="bg-motherly-sage text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition-all">Participar</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button"><i data-lucide="menu"></i></button>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b px-4 py-4 space-y-4">
-            <a href="#inicio" class="block text-lg">Início</a>
-            <a href="#sobre" class="block text-lg">O Estudo</a>
-            <a href="#equipe" class="block text-lg">Equipe</a>
-            <a href="#participe" class="block text-lg font-bold text-motherly-sage">Participar</a>
-        </div>
-    </nav>
+    </div>
+        
+<!-- Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b px-4 py-4 space-y-4">
+        <a href="#inicio" class="block text-lg">Início</a>
+        <a href="#sobre" class="block text-lg">O Estudo</a>
+        <a href="#equipe" class="block text-lg">Equipe</a>
+        <a href="#participacao" class="block text-lg">Participação</a>
+        <a href="#beneficios" class="block text-lg">Benefícios</a>
+        <a href="#participe" class="block text-lg font-bold text-motherly-sage">Participar</a>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="inicio" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4">
@@ -67,7 +72,7 @@
                     Estudo sobre Maternidade e Bem-estar
                 </span>
                 <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
-                    Cuidado na <br><span class="italic text-motherly-sage">saúde materna</span>.
+                    Cuidado na <br><span class="italic text-motherly-sage">saúde materna</span>
                 </h1>
                 <p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
                     O Motherly Plus é uma iniciativa dedicada a explorar tratamentos para a depressão pós-parto.
@@ -275,7 +280,7 @@ A depressão pós-parto afeta cerca de 17% das mulheres no mundo e, apesar de tr
 </script>
 
     <!-- Call to Action / Participate -->
-    <section id="contato" class="py-24 px-4 bg-[#F2EDE4]">
+    <section id="participe" class="py-24 px-4 bg-[#F2EDE4]">
         <div class="max-w-4xl mx-auto text-center bg-white rounded-[3rem] p-8 md:p-16 shadow-xl">
             <h2 class="text-4xl font-bold mb-6">Participe do estudo</h2>
             <p class="text-xl text-gray-600 mb-8 leading-relaxed">
