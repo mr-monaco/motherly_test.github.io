@@ -30,15 +30,19 @@
 <body class="bg-motherly-soft text-motherly-dark">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+<nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-motherly-sage rounded-full flex items-center justify-center text-white">
-                    <i data-lucide="heart" class="w-6 h-6"></i>
-                </div>
-                <span class="text-2xl font-bold tracking-tight text-motherly-dark">Motherly<span class="text-motherly-sage">Plus</span></span>
-            </div>
+            
+            <!-- Logotipo Atualizado -->
+            <a href="#inicio" class="flex items-center flex-shrink-0">
+                <img 
+                    src="assets/img/logo_s_fundo.png" 
+                    alt="MotherlyPlus" 
+                    class="h-12 w-auto object-contain"
+                >
+            </a>
+
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
                 <a href="#inicio" class="hover:text-motherly-sage transition-all">Início</a>
                 <a href="#sobre" class="hover:text-motherly-sage transition-all">O Estudo</a>
@@ -52,6 +56,7 @@
             </div>
         </div>
     </div>
+</nav>
         
 <!-- Mobile -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-b px-4 py-4 space-y-4">
