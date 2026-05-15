@@ -49,6 +49,9 @@
         
         /* Transição suave padrão */
         .transition-all { transition: all 0.3s ease; }
+        
+        /* Forçar remoção de espaços fantasmas abaixo de imagens de bloco */
+        .img-block { display: block; width: 100%; height: auto; object-fit: cover; }
     </style>
 </head>
 <body class="bg-motherly-creme text-motherly-dark-text">
@@ -92,11 +95,15 @@
         </div>
     </nav>
         
+    <!-- Transição 4: No topo da Hero -->
+    <div class="w-full pt-20 bg-motherly-creme">
+        <img src="assets/img/transition4.png" alt="Transição Topo" class="img-block">
+    </div>
+
     <!-- 2 - Hero section (Fundo Creme) -->
-    <section id="inicio" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 bg-motherly-creme">
+    <section id="inicio" class="pb-20 lg:pb-32 px-4 bg-motherly-creme">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <!-- Alterado: Fundo Laranja e Texto Branco -->
                 <span class="inline-block px-4 py-1 rounded-full bg-motherly-orange text-white text-sm font-semibold mb-6 shadow-sm">
                     Estudo sobre Maternidade e Bem-estar
                 </span>
@@ -127,8 +134,13 @@
         </div>
     </section>
 
+    <!-- Transição 2: No topo do Propósito -->
+    <div class="w-full bg-motherly-purple">
+        <img src="assets/img/transition2.png" alt="Transição Propósito" class="img-block">
+    </div>
+
     <!-- 3 - O Propósito do Estudo (Fundo Roxo) -->
-    <section id="sobre" class="pt-24 pb-16 bg-motherly-purple px-4">
+    <section id="sobre" class="py-24 bg-motherly-purple px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8 text-motherly-creme">O Propósito do Estudo</h2>
             <p class="text-xl leading-relaxed text-white text-justify font-text-light">
@@ -140,13 +152,13 @@
         </div>
     </section>
 
-    <!-- Imagem de Transição entre Propósito e Equipe -->
-    <div class="w-full overflow-hidden bg-motherly-creme line-height-0">
-        <img src="assets/img/transition.png" alt="Transição" class="w-full h-auto object-cover block">
+    <!-- Transição antiga mantida (Invertida/Fluida para a Equipe) -->
+    <div class="w-full bg-motherly-creme">
+        <img src="assets/img/transition.png" alt="Transição Equipe" class="img-block">
     </div>
     
     <!-- 4 - Nossa Equipe (Fundo Creme) -->
-    <section id="equipe" class="pt-16 pb-24 bg-motherly-creme px-4">
+    <section id="equipe" class="py-16 bg-motherly-creme px-4">
         <div class="max-w-4xl mx-auto text-center mb-20">
             <h2 class="text-4xl font-bold mb-8 text-motherly-purple">Nossa Equipe</h2>
             <p class="text-xl leading-relaxed text-motherly-dark-text text-justify font-text-light">
@@ -155,11 +167,13 @@
             </p>
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-12">
-            <div id="carousel-track" class="flex gap-8 overflow-hidden scroll-smooth">
+        <!-- Ajustado: max-w-sm no mobile garante centralização perfeita por item -->
+        <div class="relative max-w-sm md:max-w-7xl mx-auto px-4 md:px-12">
+            <!-- Ajustado: snap-x obriga o scroll a travar centralizado no mobile -->
+            <div id="carousel-track" class="flex gap-8 overflow-hidden scroll-smooth snap-x snap-mandatory">
 
                 <!-- Daniel -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/fatori_1.webp" alt="Daniel Fatori" class="w-full h-full object-cover">
@@ -171,7 +185,7 @@
                 </div>
 
                 <!-- Alicia -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/alicia_1.jpg" alt="Alicia Matijasevich" class="w-full h-full object-cover">           
@@ -183,7 +197,7 @@
                 </div>
                     
                 <!-- Brunoni -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/brunoni_t.png" alt="André Brunoni" class="w-full h-full object-cover">
@@ -195,7 +209,7 @@
                 </div>
 
                 <!-- Eduarda -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/Eduarda_1.png" alt="Eduarda Souza" class="w-full h-full object-cover">
@@ -207,7 +221,7 @@
                 </div>
                     
                 <!-- Henrique -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/Henrique_1.jpg" alt="Henrique Melo" class="w-full h-full object-cover">
@@ -219,7 +233,7 @@
                 </div>
                     
                 <!-- Julia -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/julia_1.jpeg" alt="Julia Nicolella" class="w-full h-full object-cover">
@@ -231,7 +245,7 @@
                 </div>
           
                 <!-- Leo Seda -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/Leo_1.png" alt="Leonardo Seda" class="w-full h-full object-cover">
@@ -243,7 +257,7 @@
                 </div>
                     
                 <!-- Pedro -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/pedro_1.jpeg" alt="Pedro Zuccolo" class="w-full h-full object-cover">
@@ -255,7 +269,7 @@
                 </div>
                     
                 <!-- Re -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/re_1.jpeg" alt="Renatha Ferreira" class="w-full h-full object-cover">
@@ -267,7 +281,7 @@
                 </div>
 
                 <!-- Tati -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/tati_t.png" alt="Tatiane Borja" class="w-full h-full object-cover">
@@ -279,7 +293,7 @@
                 </div>
                     
                 <!-- Wagner -->
-                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/wag_t.png" alt="Wagner Ribeiro" class="w-full h-full object-cover">
@@ -292,14 +306,19 @@
 
             </div>
 
-            <button onclick="scrollCarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-motherly-purple p-2 rounded-full shadow-lg hover:bg-opacity-95 text-motherly-creme transition-all border border-purple-400/20">
+            <button onclick="scrollCarousel(-1)" class="absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 bg-motherly-purple p-2 rounded-full shadow-lg hover:bg-opacity-95 text-motherly-creme transition-all border border-purple-400/20">
                 <i data-lucide="chevron-left" class="w-6 h-6"></i>
             </button>
-            <button onclick="scrollCarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-motherly-purple p-2 rounded-full shadow-lg hover:bg-opacity-95 text-motherly-creme transition-all border border-purple-400/20">
+            <button onclick="scrollCarousel(1)" class="absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 bg-motherly-purple p-2 rounded-full shadow-lg hover:bg-opacity-95 text-motherly-creme transition-all border border-purple-400/20">
                 <i data-lucide="chevron-right" class="w-6 h-6"></i>
             </button>
         </div>
     </section>
+
+    <!-- Transição 3: No final de 'Nossa Equipe' -->
+    <div class="w-full bg-motherly-purple">
+        <img src="assets/img/transition3.png" alt="Transição Fim Equipe" class="img-block">
+    </div>
 
     <!-- 5 - Quem pode participar? Como é a participação? (Fundo Roxo) -->
     <section id="participacao" class="flex flex-col md:flex-row bg-motherly-purple">
@@ -334,6 +353,11 @@
         </div>
     </section>
 
+    <!-- Transição 1: No topo de Benefícios -->
+    <div class="w-full bg-motherly-creme">
+        <img src="assets/img/transition.png" alt="Transição Benefícios" class="img-block">
+    </div>
+
     <!-- 6 - Benefícios (Fundo Creme) -->
     <section id="beneficios" class="py-24 bg-motherly-creme px-4">
         <div class="max-w-4xl mx-auto text-center">
@@ -341,7 +365,7 @@
             <div class="grid md:grid-cols-1 gap-8 text-motherly-dark-text text-xl leading-relaxed text-justify font-text-light">
                 <p>
                     Ao participar, você terá acesso gratuito a atendimento psicológico especializado e ao aplicativo Motherly Plus — com ferramentas, áudios e conteúdos pensados para a saúde emocional de mães. 
-                    O tratamento foi desenvolvido para reduzir sintomas de tristeza and ansiedade e melhorar o bem-estar no dia a dia.
+                    O tratamento foi desenvolvido para reduzir sintomas de tristeza e ansiedade e melhorar o bem-estar no dia a dia.
                 </p>
                 <p>
                     Todas as participantes recebem o tratamento — seja de imediato ou após 4 semanas. 
@@ -363,6 +387,11 @@
             </a>
         </div>
     </section>
+
+    <!-- Transição 2: No final de tudo (Último bloco antes do Footer) -->
+    <div class="w-full bg-motherly-purple">
+        <img src="assets/img/transition2.png" alt="Transição Final" class="img-block">
+    </div>
 
     <!-- 1 - Footer (Seguindo o padrão do Menu com texto creme) -->
     <footer class="py-12 bg-motherly-purple border-t border-purple-400/20 px-4 text-motherly-creme">
@@ -401,10 +430,11 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Carrossel Equipe
+        // Carrossel Equipe Ajustado para Mobile e Desktop
         function scrollCarousel(direction) {
             const track = document.getElementById('carousel-track');
-            const scrollAmount = track.clientWidth; 
+            // No mobile ele rola a largura do card único, no desktop rola dinamicamente
+            const scrollAmount = window.innerWidth < 768 ? track.querySelector('div').clientWidth + 32 : track.clientWidth; 
             track.scrollBy({
                 left: direction * scrollAmount,
                 behavior: 'smooth'
