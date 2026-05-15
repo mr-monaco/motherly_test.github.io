@@ -32,422 +32,357 @@
         .font-text-light { font-family: 'DM Sans', sans-serif; font-weight: 300; }
 
         /* Nova Paleta de Cores Customizadas */
-        .bg-motherly-soft { background-color: #f7ede3; } /* Fundo Creme */
-        .text-motherly-dark { color: #886cd0; } /* Letra Roxa (Usa quando o fundo for creme) */
+        .bg-motherly-purple { background-color: #886cd0; }
+        .text-motherly-purple { color: #886cd0; }
         
-        /* Fundo do Menu (Roxo) */
-        .bg-motherly-menu { background-color: #886cd0; }
+        .bg-motherly-creme { background-color: #f7ede3; }
+        .text-motherly-creme { color: #f7ede3; }
         
-        /* Detalhes (Laranja) - Usar apenas em bordas, textos específicos ou ícones */
-        .text-motherly-accent { color: #f99246; }
-        .border-motherly-accent { border-color: #f99246; }
-        .bg-motherly-accent { background-color: #f99246; }
+        .bg-motherly-orange { background-color: #f99246; }
+        .text-motherly-orange { color: #f99246; }
+        
+        .bg-motherly-dark-text { background-color: #353536; }
+        .text-motherly-dark-text { color: #353536; }
+        
+        .bg-motherly-white-text { background-color: #f7f7fc; }
+        .text-motherly-white-text { color: #f7f7fc; }
         
         /* Transição suave padrão */
         .transition-all { transition: all 0.3s ease; }
     </style>
 </head>
-<!-- O body já inicia com o fundo creme e as letras roxas por padrão -->
-<body class="bg-motherly-soft text-motherly-dark">
+<body class="bg-motherly-creme text-motherly-dark-text">
 
-    <!-- Navigation -->
-<nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            
-            <!-- Logotipo Atualizado -->
-            <a href="#inicio" class="flex items-center flex-shrink-0">
-                <img 
-                    src="assets/img/logo_s_fundo.png" 
-                    alt="MotherlyPlus" 
-                    class="h-12 w-auto object-contain"
-                >
-            </a>
+    <!-- 2 - Menu (o que tem o logo) -->
+    <nav class="fixed w-full z-50 bg-motherly-purple border-b border-purple-400/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logotipo Atualizado -->
+                <a href="#inicio" class="flex items-center flex-shrink-0">
+                    <img 
+                        src="assets/img/logo_s_fundo.png" 
+                        alt="MotherlyPlus" 
+                        class="h-12 w-auto object-contain"
+                    >
+                </a>
 
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#inicio" class="hover:text-motherly-sage transition-all">Início</a>
-                <a href="#sobre" class="hover:text-motherly-sage transition-all">O Estudo</a>
-                <a href="#equipe" class="hover:text-motherly-sage transition-all">Equipe</a>
-                <a href="#participacao" class="hover:text-motherly-sage transition-all">Participação</a>
-                <a href="#beneficios" class="hover:text-motherly-sage transition-all">Benefícios</a>
-                <a href="#participe" class="bg-motherly-sage text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition-all">Participar</a>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button"><i data-lucide="menu"></i></button>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-motherly-orange">
+                    <a href="#inicio" class="hover:opacity-80 transition-all">Início</a>
+                    <a href="#sobre" class="hover:opacity-80 transition-all">O Estudo</a>
+                    <a href="#equipe" class="hover:opacity-80 transition-all">Equipe</a>
+                    <a href="#participacao" class="hover:opacity-80 transition-all">Participação</a>
+                    <a href="#beneficios" class="hover:opacity-80 transition-all">Benefícios</a>
+                    <a href="#participe" class="bg-motherly-orange text-motherly-creme px-5 py-2 rounded-full hover:bg-opacity-90 transition-all">Participar</a>
+                </div>
+                <div class="md:hidden text-motherly-orange">
+                    <button id="mobile-menu-button"><i data-lucide="menu"></i></button>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
         
-<!-- Mobile -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b px-4 py-4 space-y-4">
-        <a href="#inicio" class="block text-lg">Início</a>
-        <a href="#sobre" class="block text-lg">O Estudo</a>
-        <a href="#equipe" class="block text-lg">Equipe</a>
-        <a href="#participacao" class="block text-lg">Participação</a>
-        <a href="#beneficios" class="block text-lg">Benefícios</a>
-        <a href="#participe" class="block text-lg font-bold text-motherly-sage">Participar</a>
-    </div>
-</nav>
-
-    <!-- Hero Section -->
-    <section id="inicio" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-motherly-purple border-t border-purple-400/20 px-4 py-4 space-y-4 text-motherly-orange">
+            <a href="#inicio" class="block text-lg">Início</a>
+            <a href="#sobre" class="block text-lg">O Estudo</a>
+            <a href="#equipe" class="block text-lg">Equipe</a>
+            <a href="#participacao" class="block text-lg">Participação</a>
+            <a href="#beneficios" class="block text-lg">Benefícios</a>
+            <a href="#participe" class="block text-lg font-bold">Participar</a>
+        </div>
+    </nav>
+        
+    <!-- 3 - Hero section -->
+    <section id="inicio" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 bg-motherly-purple">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="inline-block px-4 py-1 rounded-full border border-motherly-sage text-motherly-sage text-sm font-semibold mb-6">
+                <span class="inline-block px-4 py-1 rounded-full border border-motherly-orange text-motherly-orange text-sm font-semibold mb-6">
                     Estudo sobre Maternidade e Bem-estar
                 </span>
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
-                    Cuidado na <br><span class="italic text-motherly-sage">saúde materna</span>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 text-motherly-creme">
+                    Cuidado na <br><span class="text-motherly-purple bg-motherly-creme px-2 rounded">saúde materna</span>
                 </h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+                <p class="text-lg text-motherly-creme mb-8 max-w-lg leading-relaxed font-text-light">
                     O Motherly Plus é uma iniciativa dedicada a explorar tratamentos para a depressão pós-parto.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#participe" class="bg-motherly-sage text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all flex items-center gap-2">
+                    <a href="#participe" class="bg-motherly-orange text-motherly-creme px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all flex items-center gap-2">
                         Saiba como participar <i data-lucide="chevron-right" class="w-5 h-5"></i>
                     </a>
                 </div>
             </div>
-        <!-- image -->
-              <div class="relative">
-                <div class="aspect-square bg-gray-200 rounded-2xl overflow-hidden shadow-2xl relative z-10">
+            <!-- image -->
+            <div class="relative">
+                <div class="aspect-square bg-purple-900/20 rounded-2xl overflow-hidden shadow-2xl relative z-10">
                     <img 
-                            src="assets/img/test.jpg" 
-                            alt="Imagem Teste" 
-                            class="w-full h-full object-cover"
-                   >
+                        src="assets/img/test.jpg" 
+                        alt="Imagem Teste" 
+                        class="w-full h-full object-cover"
+                    >
                 </div>
-              <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-motherly-sage/20 rounded-full blur-3xl"></div>
-              <div class="absolute -top-6 -right-6 w-32 h-32 bg-orange-200/30 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-motherly-orange/20 rounded-full blur-3xl"></div>
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-motherly-creme/10 rounded-full blur-3xl"></div>
             </div>
-            </section>
+        </div>
+    </section>
 
-    <!-- About Section -->
-    <section id="sobre" class="py-24 bg-white px-4">
+    <!-- 4 - seçao O Propósito do Estudo -->
+    <section id="sobre" class="py-24 bg-motherly-creme px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8 italic">O Propósito do Estudo</h2>
-            <p class="text-xl leading-relaxed text-gray-700 text-justify">
-A depressão pós-parto afeta cerca de 17% das mulheres no mundo e, apesar de tratamentos eficazes existirem, o acesso a eles ainda é muito limitado no Brasil. 
-                Nosso objetivo é testar uma intervenção inovadora e acessível — uma sessão única de psicoterapia combinada ao suporte do aplicativo 
-                <span class="italic text-motherly-sage">Motherly Plus</span> — 
+            <h2 class="text-4xl font-bold mb-8 text-motherly-purple">O Propósito do Estudo</h2>
+            <p class="text-xl leading-relaxed text-motherly-dark-text text-justify font-text-light">
+                A depressão pós-parto afeta cerca de 17% das mulheres no mundo e, apesar de tratamentos eficazes existirem, o acesso a eles ainda é muito limitado no Brasil. 
+                Nosso objective é testar uma intervenção inovadora e acessível — uma sessão única de psicoterapia combinada ao suporte do aplicativo 
+                <span class="font-bold text-motherly-purple">Motherly Plus</span> — 
                 para o tratamento da depressão pós-parto. Queremos transformar essa evidência em uma ferramenta escalável de cuidado em saúde mental materna no Brasil.
             </p>
         </div>
     </section>
     
-    <!-- Equipe Section -->
-  <section id="equipe" class="py-24 bg-motherly-soft px-4">
+    <!-- 5 - seçao Nossa Equipe -->
+    <section id="equipe" class="py-24 bg-motherly-purple px-4">
         <div class="max-w-4xl mx-auto text-center mb-20">
-            <h2 class="text-4xl font-bold mb-8 italic">Nossa Equipe</h2>
-            <p class="text-xl leading-relaxed text-gray-700 text-justify">
+            <h2 class="text-4xl font-bold mb-8 text-motherly-creme">Nossa Equipe</h2>
+            <p class="text-xl leading-relaxed text-motherly-creme text-justify font-text-light">
                 Somos um grupo multidisciplinar de pesquisadores e especialistas da Faculdade de Medicina da USP, 
                 unidos pelo propósito de transformar o cuidado com a saúde mental materna através da ciência e empatia.
             </p>
         </div>
 
-        <div class="relative px-12">
+        <div class="relative max-w-7xl mx-auto px-12">
             <div id="carousel-track" class="flex gap-8 overflow-hidden scroll-smooth">
 
-<!-- Daniel -->
+                <!-- Daniel -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/fatori_1.webp" alt="Daniel Fatori" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Daniel Fatori</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisador Principal</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Psicólogo</p>
+                    </div>
+                </div>
 
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/fatori_1.webp" 
-                    alt="Daniel Fatori" 
-                    class="w-full h-full object-cover"
-                    >
+                <!-- Alicia -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/alicia_1.jpg" alt="Alicia Matijasevich" class="w-full h-full object-cover">           
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Alicia Matijasevich Manitto</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Médica Psiquiatra</p>
+                    </div>
+                </div>
+                    
+                <!-- Brunoni -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/brunoni_t.png" alt="André Brunoni" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">André Russowsky Brunoni</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisador Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Médico Psiquiatra</p>
+                    </div>
+                </div>
+
+                <!-- Eduarda -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/Eduarda_1.png" alt="Eduarda Souza" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Eduarda Silva Souza</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Psicóloga</p>
+                    </div>
+                </div>
+                    
+                <!-- Henrique -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/Henrique_1.jpg" alt="Henrique Melo" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Henrique Araujo Dias de Melo</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Psicólogo</p>
+                    </div>
+                </div>
+                    
+                <!-- Julia -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/julia_1.jpeg" alt="Julia Nicolella" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Julia Monferdini Nicolella</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Psicóloga</p>
+                    </div>
+                </div>
+          
+                <!-- Leo Seda -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/Leo_1.png" alt="Leonardo Seda" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Leonardo Seda</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Psicólogo</p>
+                    </div>
+                </div>
+                    
+                <!-- Pedro -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/pedro_1.jpeg" alt="Pedro Zuccolo" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Pedro Fonseca Zuccolo</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Psicólogo</p>
+                    </div>
+                </div>
+                    
+                <!-- Re -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/re_1.jpeg" alt="Renatha Ferreira" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Renatha El Rafihi Ferreira</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Psicóloga</p>
+                    </div>
+                </div>
+
+                <!-- Tati -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/tati_t.png" alt="Tatiane Borja" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Tatiane Neves Borja</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Médica Psiquiatra</p>
+                    </div>
+                </div>
+                    
+                <!-- Wagner -->
+                <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/20 shadow-sm border border-purple-400/20">
+                            <img src="assets/img/wag_t.png" alt="Wagner Ribeiro" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold text-motherly-orange leading-tight">Wagner Ribeiro</h3>
+                        <p class="text-motherly-orange font-semibold text-xs uppercase mt-1">Pesquisador Associada</p>
+                        <p class="text-motherly-dark-text text-sm font-text-light">Médico Psiquiatra</p>
+                    </div>
+                </div>
+
             </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Daniel Fatori</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisador Principal</p>
-            <p class="text-gray-500 text-sm italic">Psicólogo</p>
-        </div>
-    </div>
 
-<!-- Alicia -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/alicia_1.jpg" 
-                    alt="Alicia Matijasevich" 
-                    class="w-full h-full object-cover"
-                    >           
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Alicia Matijasevich Manitto</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
-            <p class="text-gray-500 text-sm italic">Médica Psiquiatra</p>
-        </div>
-    </div>
-            
-<!-- Brunoni -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/brunoni_t.png" 
-                    alt="André Brunoni" 
-                    class="w-full h-full object-cover"
-                    >
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">André Russowsky Brunoni</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisador Associado</p>
-            <p class="text-gray-500 text-sm italic">Médico Psiquiatra</p>
-        </div>
-    </div>
-
-<!-- Eduarda -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/Eduarda_1.png" 
-                    alt="Eduarda Souza" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Eduarda Silva Souza</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
-            <p class="text-gray-500 text-sm italic">Psicóloga</p>
-        </div>
-    </div>
-            
-<!-- Henrique -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/Henrique_1.jpg" 
-                    alt="Henrique Melo" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Henrique Araujo Dias de Melo</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisador Associado</p>
-            <p class="text-gray-500 text-sm italic">Psicólogo</p>
-        </div>
-    </div>
-            
-<!-- Julia -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/julia_1.jpeg" 
-                    alt="Julia Nicolella" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Julia Monferdini Nicolella</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
-            <p class="text-gray-500 text-sm italic">Psicóloga</p>
-        </div>
-    </div>
-  
-<!-- Leo Seda -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/Leo_1.png" 
-                    alt="Leonardo Seda" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Leonardo Seda</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisador Associado</p>
-            <p class="text-gray-500 text-sm italic">Psicólogo</p>
-        </div>
-    </div>
-            
-<!-- Pedro -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/pedro_1.jpeg" 
-                    alt="Pedro Zuccolo" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Pedro Fonseca Zuccolo</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisador Associado</p>
-            <p class="text-gray-500 text-sm italic">Psicólogo</p>
-        </div>
-    </div>
-            
-<!-- Re -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/re_1.jpeg" 
-                    alt="Renatha Ferreira" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Renatha El Rafihi Ferreira</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
-            <p class="text-gray-500 text-sm italic">Psicóloga</p>
-        </div>
-    </div>
-
-<!-- Tati -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/tati_t.png" 
-                    alt="Tatiane Borja" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Tatiane Neves Borja</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisadora Associada</p>
-            <p class="text-gray-500 text-sm italic">Médica Psiquiatra</p>
-        </div>
-    </div>
-            
-<!-- Wagner -->
-
-    <div class="min-w-[calc(50%-1rem)] md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0">
-        <div class="text-center">
-            <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-gray-100 shadow-sm border border-gray-100">
-                <img 
-                    src="assets/img/wag_t.png" 
-                    alt="Wagner Ribeiro" 
-                    class="w-full h-full object-cover">
-            </div>
-            <h3 class="text-lg font-bold text-motherly-dark leading-tight">Wagner Ribeiro</h3>
-            <p class="text-motherly-sage font-semibold text-xs uppercase mt-1">Pesquisador Associado</p>
-            <p class="text-gray-500 text-sm italic">Médico Psiquiatra</p>
-        </div>
-    </div>
-
-</div>
-
-            <button onclick="scrollCarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 text-motherly-sage transition-all border border-gray-100">
+            <button onclick="scrollCarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 bg-motherly-creme p-2 rounded-full shadow-lg hover:bg-opacity-95 text-motherly-purple transition-all border border-purple-400/10">
                 <i data-lucide="chevron-left" class="w-6 h-6"></i>
             </button>
-            <button onclick="scrollCarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 text-motherly-sage transition-all border border-gray-100">
+            <button onclick="scrollCarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-motherly-creme p-2 rounded-full shadow-lg hover:bg-opacity-95 text-motherly-purple transition-all border border-purple-400/10">
                 <i data-lucide="chevron-right" class="w-6 h-6"></i>
             </button>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    function scrollCarousel(direction) {
-        const track = document.getElementById('carousel-track');
-        // Calcula a largura de um item para saber quanto rolar
-        const scrollAmount = track.clientWidth; 
-        track.scrollBy({
-            left: direction * scrollAmount,
-            behavior: 'smooth'
-        });
-    }
-</script>
-<!-- Participacao -->
+    <!-- 6 - seçao Quem pode participar? Como é a participação? -->
+    <section id="participacao" class="flex flex-col md:flex-row bg-motherly-creme">
+        <div class="flex-1 py-24 px-8 md:px-16 flex flex-col justify-start"> 
+            <div class="max-w-md mx-auto md:ml-auto md:mr-0">
+                <h2 class="text-4xl font-bold mb-8 text-motherly-purple">Quem pode participar?</h2>
+                <div class="space-y-6 text-motherly-dark-text leading-relaxed text-justify font-text-light">
+                    <p>Você poderá participar caso se encaixe nos seguintes critérios:</p>
+                    <p>(1) Ter entre 18 a 40 anos de idade</p>
+                    <p>(2) Até 12 meses após o parto</p>
+                    <p>(3) Ser alfabetizada</p>
+                    <p>(4) Possuir um smartphone funcional com Android para uso pessoal</p>
+                    <p>(5) Não estar em tratamento farmacológico e/ou psicoterápico nas últimas quatro semanas</p>
+                    <p>Além destes, iremos investigar se você preenche critérios para transtorno depressivo maior utilizando questionários que serão aplicados ao longo do processo de coleta.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 py-24 px-8 md:px-16 flex flex-col justify-start border-t md:border-t-0 md:border-l border-purple-400/10"> 
+            <div class="max-w-md mx-auto md:mr-auto md:ml-0">
+                <h2 class="text-4xl font-bold mb-8 text-motherly-purple">Como é a participação?</h2>
+                <div class="space-y-6 text-motherly-dark-text leading-relaxed text-justify font-text-light">
+                    <p>
+                        A participação dura 8 semanas e acontece inteiramente online. Após a triagem, você será sorteada para um dos dois grupos: tratamento imediato ou lista de espera de 4 semanas. 
+                        O tratamento consiste em uma sessão única com uma psicóloga da nossa equipe e acesso ao aplicativo Motherly, com áudios, leituras e ferramentas de apoio ao bem-estar.
+                    </p>
+                    <p>
+                        Ao longo de 8 semanas, pediremos que você responda alguns questionários em quatro momentos diferentes — para acompanhar como você está se sentindo. 
+                        Tudo acontece pelo celular, no seu tempo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="participacao" class="flex flex-col md:flex-row">
-    <div class="flex-1 bg-[#F4F6F0] py-24 px-8 md:px-16 flex flex-col justify-start"> 
-        <div class="max-w-md mx-auto md:ml-auto md:mr-0">
-            <h2 class="text-4xl font-bold mb-8 text-motherly-dark italic">Quem pode participar?</h2>
-            <div class="space-y-6 text-gray-700 leading-relaxed text-justify">
-              <p>
-                  Você poderá participar caso se encaixe nos seguintes critérios
-              </p>
+    <!-- 7 - seçao Quais os benefícios em participar do Motherly Plus? -->
+    <section id="beneficios" class="py-24 bg-motherly-purple px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 text-motherly-creme">Quais os benefícios em participar do Motherly Plus?</h2>
+            <div class="grid md:grid-cols-1 gap-8 text-motherly-white-text text-xl leading-relaxed text-justify font-text-light">
                 <p>
-                    (1) Ter entre 18 a 40 anos de idade
+                    Ao participar, você terá acesso gratuito a atendimento psicológico especializado e ao aplicativo Motherly Plus — com ferramentas, áudios e conteúdos pensados para a saúde emocional de mães. 
+                    O tratamento foi desenvolvido para reduzir sintomas de tristeza e ansiedade e melhorar o bem-estar no dia a dia.
                 </p>
                 <p>
-                    (2) Até 12 meses após o parto
-                </p>
-                <p>                                    
-                    (3) Ser alfabetizada
-                </p>
-                <p>                    
-                    (4) Possuir um smartphone funcional com Android para uso pessoal
-                </p>
-                <p>                    
-                    (5) Não estar em tratamento farmacológico e/ou psicoterápico nas últimas quatro semanas
-                </p>
-                <p>
-                    Além destes, iremos investigar se você preenche critérios para transtorno depressivo maior utilizando questionários que serão aplicados ao longo do processo de coleta. 
+                    Todas as participantes recebem o tratamento — seja de imediato ou após 4 semanas. 
+                    Além do benefício pessoal, sua participação ajuda a construir evidências para que mais mães tenham acesso a um cuidado de qualidade no futuro.
                 </p>
             </div>
         </div>
-    </div>
-    <div class="flex-1 bg-[#FAF8F4] py-24 px-8 md:px-16 flex flex-col justify-start border-l border-gray-100"> 
-        <div class="max-w-md mx-auto md:mr-auto md:ml-0">
-            <h2 class="text-4xl font-bold mb-8 text-motherly-dark italic">Como é a participação?</h2>
-            <div class="space-y-6 text-gray-700 leading-relaxed text-justify">
-                <p>                    
-                    A participação dura 8 semanas e acontece inteiramente online. Após a triagem, você será sorteada para um dos dois grupos: tratamento imediato ou lista de espera de 4 semanas. 
-                    O tratamento consiste em uma sessão única com uma psicóloga da nossa equipe e acesso ao aplicativo Motherly, com áudios, leituras e ferramentas de apoio ao bem-estar.
-                    
-                </p>
-                <p>
-                    Ao longo de 8 semanas, pediremos que você responda alguns questionários em quatro momentos diferentes — para acompanhar como você está se sentindo. 
-                    Tudo acontece pelo celular, no seu tempo.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Beneficios-->
-<section id="beneficios" class="py-24 bg-white px-4">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-12 italic text-motherly-dark">Quais os benefícios em participar do Motherly Plus?</h2>
-        <div class="grid md:grid-cols-1 gap-8 text-gray-700 text-xl leading-relaxed text-justify">
-            <p>
-                Ao participar, você terá acesso gratuito a atendimento psicológico especializado e ao aplicativo <span class="italic text-motherly-sage">Motherly Plus</span> — com ferramentas, áudios e conteúdos pensados para a saúde emocional de mães. 
-                O tratamento foi desenvolvido para reduzir sintomas de tristeza e ansiedade e melhorar o bem-estar no dia a dia.
-            </p>
-            <p>
-                Todas as participantes recebem o tratamento — seja de imediato ou após 4 semanas. 
-                Além do benefício pessoal, sua participação ajuda a construir evidências para que mais mães tenham acesso a um cuidado de qualidade no futuro.
-            </p>
-        </div>
-    </div>
-</section>
-<!-- Call to Action / Participate -->
-    <section id="participe" class="py-24 px-4 bg-[#F2EDE4]">
-        <div class="max-w-4xl mx-auto text-center bg-white rounded-[3rem] p-8 md:p-16 shadow-xl">
-            <h2 class="text-4xl font-bold mb-6">Participe do estudo</h2>
-            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+    </section>
+
+    <!-- 8 - seçao Participe do estudo -->
+    <section id="participe" class="py-24 px-4 bg-motherly-purple">
+        <div class="max-w-4xl mx-auto text-center bg-motherly-creme rounded-[3rem] p-8 md:p-16 shadow-xl">
+            <h2 class="text-4xl font-bold mb-6 text-motherly-purple">Participe do estudo</h2>
+            <p class="text-xl text-motherly-dark-text mb-8 leading-relaxed font-text-light">
                 Clique no botão para participar.
             </p>
-            <a href="https://redcap.hc.fm.usp.br/surveys/?s=4TWX3TXD8LFYRX4C" target="_blank" rel="noopener noreferrer" class="inline-block bg-motherly-sage text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 hover:shadow-lg transition-all shadow-md">
+            <a href="https://redcap.hc.fm.usp.br/surveys/?s=4TWX3TXD8LFYRX4C" target="_blank" rel="noopener noreferrer" class="inline-block bg-motherly-purple text-motherly-orange px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all shadow-md">
                 Participar
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-gray-200 px-4">
+    <!-- 9 - seçao © 2024 Motherly Plus. Todos os direitos reservados. (Igual ao menu) -->
+    <footer class="py-12 bg-motherly-purple border-t border-purple-400/20 px-4 text-motherly-orange">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-motherly-sage rounded-full flex items-center justify-center text-white">
-                    <i data-lucide="heart" class="w-4 h-4"></i>
-                </div>
-                <span class="text-xl font-bold tracking-tight text-motherly-dark">Motherly<span class="text-motherly-sage">Plus</span></span>
+            
+            <!-- Logo no Footer -->
+            <div class="flex items-center flex-shrink-0">
+                <img 
+                    src="assets/img/logo_s_fundo.png" 
+                    alt="MotherlyPlus" 
+                    class="h-10 w-auto object-contain"
+                >
             </div>
-            <div class="text-gray-500 text-sm">
+            
+            <div class="text-sm font-medium">
                 &copy; 2024 Motherly Plus. Todos os direitos reservados.
             </div>
             <div class="flex gap-6">
-                <a href="#" class="text-gray-400 hover:text-motherly-sage transition-all"><i data-lucide="instagram"></i></a>
-                <a href="#" class="text-gray-400 hover:text-motherly-sage transition-all"><i data-lucide="linkedin"></i></a>
-                <a href="#" class="text-gray-400 hover:text-motherly-sage transition-all"><i data-lucide="mail"></i></a>
+                <a href="#" class="hover:opacity-80 transition-all"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:opacity-80 transition-all"><i data-lucide="linkedin"></i></a>
+                <a href="#" class="hover:opacity-80 transition-all"><i data-lucide="mail"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts e Carrossel -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
@@ -459,6 +394,16 @@ A depressão pós-parto afeta cerca de 17% das mulheres no mundo e, apesar de tr
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Carrossel Equipe
+        function scrollCarousel(direction) {
+            const track = document.getElementById('carousel-track');
+            const scrollAmount = track.clientWidth; 
+            track.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>
