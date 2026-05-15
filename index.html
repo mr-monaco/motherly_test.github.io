@@ -5,28 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motherly Plus | Estudo e Apoio à Maternidade</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts: Importando Roboto e DM Sans com variações Light (300) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Color code -->
+    
+    <!-- Configuração de Cores e Fontes -->
     <style>
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
             scroll-behavior: smooth;
         }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-        .bg-motherly-soft { background-color: #F3F5F9; }
-        .text-motherly-dark { color: #4A443F; }
-        .bg-motherly-sage { background-color: #184CA2; }
-        .border-motherly-sage { border-color: #184CA2; }
-        .text-motherly-sage { color: #D77D7F; }
         
-        /* Custom smooth transition */
+        /* Aplicando Roboto aos Títulos */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Classes utilitárias para variações Light (300) */
+        .font-title-light { font-family: 'Roboto', sans-serif; font-weight: 300; }
+        .font-text-light { font-family: 'DM Sans', sans-serif; font-weight: 300; }
+
+        /* Nova Paleta de Cores Customizadas */
+        .bg-motherly-soft { background-color: #f7ede3; } /* Fundo Creme */
+        .text-motherly-dark { color: #886cd0; } /* Letra Roxa (Usa quando o fundo for creme) */
+        
+        /* Fundo do Menu (Roxo) */
+        .bg-motherly-menu { background-color: #886cd0; }
+        
+        /* Detalhes (Laranja) - Usar apenas em bordas, textos específicos ou ícones */
+        .text-motherly-accent { color: #f99246; }
+        .border-motherly-accent { border-color: #f99246; }
+        .bg-motherly-accent { background-color: #f99246; }
+        
+        /* Transição suave padrão */
         .transition-all { transition: all 0.3s ease; }
     </style>
 </head>
+<!-- O body já inicia com o fundo creme e as letras roxas por padrão -->
 <body class="bg-motherly-soft text-motherly-dark">
 
     <!-- Navigation -->
