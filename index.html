@@ -59,14 +59,14 @@
     <!-- 1 - Menu (ambos com texto creme e botão mantido original) -->
     <nav class="fixed w-full z-50 bg-motherly-purple border-b border-purple-400/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
+            <div class="flex justify-between h-24 items-center">
                 
-                <!-- Logotipo -->
-                <a href="#inicio" class="flex items-center flex-shrink-0">
+                <!-- Logotipo Corrigido (Aumentado para maior destaque) -->
+                <a href="#inicio" class="flex items-center flex-shrink-0 py-2">
                     <img 
                         src="assets/img/logo_s_fundo.png" 
                         alt="MotherlyPlus" 
-                        class="h-12 w-auto object-contain"
+                        class="h-16 md:h-20 w-auto object-contain"
                     >
                 </a>
 
@@ -96,40 +96,23 @@
     </nav>
         
     <!-- Transição 4: No topo da Hero -->
-    <div class="w-full pt-20 bg-motherly-creme">
-        <img src="assets/img/transition.png" alt="Transição Topo" class="img-block">
+    <div class="w-full pt-24 bg-motherly-creme">
+        <img src="assets/img/transition4.png" alt="Transição Topo" class="img-block">
     </div>
 
-    <!-- 2 - Hero section (Fundo Creme) -->
+    <!-- 2 - Hero section (Fundo Creme - Sem Imagem Lateral e Sem o Selo) -->
     <section id="inicio" class="pb-20 lg:pb-32 px-4 bg-motherly-creme">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="inline-block px-4 py-1 rounded-full bg-motherly-orange text-white text-sm font-semibold mb-6 shadow-sm">
-                    Estudo sobre Maternidade e Bem-estar
-                </span>
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 text-motherly-purple">
-                    Cuidado na saúde materna
-                </h1>
-                <p class="text-lg text-motherly-purple mb-8 max-w-lg leading-relaxed font-text-light">
-                    O Motherly Plus é uma iniciativa dedicada a explorar tratamentos para a depressão pós-parto.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#participe" class="bg-motherly-orange text-motherly-creme px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all flex items-center gap-2">
-                        Saiba como participar <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- image -->
-            <div class="relative">
-                <div class="aspect-square bg-purple-900/10 rounded-2xl overflow-hidden shadow-2xl relative z-10">
-                    <img 
-                        src="assets/img/test.jpg" 
-                        alt="Imagem Teste" 
-                        class="w-full h-full object-cover"
-                    >
-                </div>
-                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-motherly-purple/10 rounded-full blur-3xl"></div>
-                <div class="absolute -top-6 -right-6 w-32 h-32 bg-motherly-orange/10 rounded-full blur-3xl"></div>
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 text-motherly-purple">
+                Cuidado na saúde materna
+            </h1>
+            <p class="text-xl text-motherly-purple mb-8 mx-auto max-w-2xl leading-relaxed font-text-light">
+                O Motherly Plus é uma iniciativa dedicada a explorar treatments para a depressão pós-parto.
+            </p>
+            <div class="flex justify-center">
+                <a href="#participe" class="bg-motherly-orange text-motherly-creme px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all flex items-center gap-2">
+                    Saiba como participar <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -152,7 +135,7 @@
         </div>
     </section>
 
-    <!-- Transição antiga mantida (Invertida/Fluida para a Equipe) -->
+    <!-- Transição Fluida para a Equipe -->
     <div class="w-full bg-motherly-creme">
         <img src="assets/img/transition.png" alt="Transição Equipe" class="img-block">
     </div>
@@ -167,9 +150,7 @@
             </p>
         </div>
 
-        <!-- Ajustado: max-w-sm no mobile garante centralização perfeita por item -->
         <div class="relative max-w-sm md:max-w-7xl mx-auto px-4 md:px-12">
-            <!-- Ajustado: snap-x obriga o scroll a travar centralizado no mobile -->
             <div id="carousel-track" class="flex gap-8 overflow-hidden scroll-smooth snap-x snap-mandatory">
 
                 <!-- Daniel -->
@@ -195,9 +176,9 @@
                         <p class="text-motherly-dark-text text-sm font-text-light">Médica Psiquiatra</p>
                     </div>
                 </div>
-                    
-                    <!-- Eduarda -->
-                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 snap-center">
+
+                <!-- Eduarda -->
+                <div class="w-full md:min-w-[calc(33.33%-1.5rem)] lg:min-w-[calc(25%-1.5rem)] flex-shrink-0 depth snap-center">
                     <div class="text-center">
                         <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden bg-purple-900/5 shadow-sm border border-purple-900/10">
                             <img src="assets/img/Eduarda_1.png" alt="Eduarda Souza" class="w-full h-full object-cover">
