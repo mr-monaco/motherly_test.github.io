@@ -95,9 +95,9 @@
         </div>
     </nav>
         
-    <!-- Transição 4: No topo da Hero -->
+    <!-- Transição do Topo (Atualizada para transition.png) -->
     <div class="w-full pt-24 bg-motherly-creme">
-        <img src="assets/img/transition4.png" alt="Transição Topo" class="img-block">
+        <img src="assets/img/transition.png" alt="Transição Topo" class="img-block">
     </div>
 
     <!-- 2 - Hero section (Fundo Creme - Sem Imagem Lateral e Sem o Selo) -->
@@ -284,9 +284,9 @@
         </div>
     </section>
 
-    <!-- Transição 3: No final de 'Nossa Equipe' -->
+    <!-- Transição (Atualizada para transition2.png) -->
     <div class="w-full bg-motherly-purple">
-        <img src="assets/img/transition3.png" alt="Transição Fim Equipe" class="img-block">
+        <img src="assets/img/transition2.png" alt="Transição Fim Equipe" class="img-block">
     </div>
 
     <!-- 5 - Quem pode participar? Como é a participação? (Fundo Roxo) -->
@@ -333,7 +333,7 @@
             <h2 class="text-4xl font-bold mb-12 text-motherly-purple">Quais os benefícios em participar do Motherly Plus?</h2>
             <div class="grid md:grid-cols-1 gap-8 text-motherly-dark-text text-xl leading-relaxed text-justify font-text-light">
                 <p>
-                    Ao participar, você terá acesso gratuito a atendimento psicológico especializado e ao aplicativo Motherly Plus — com ferramentas, áudios e conteúdos pensados para a saúde emotional de mães. 
+                    Ao participar, você terá acesso gratuito a atendimento psicológico especializado e ao aplicativo Motherly Plus — com ferramentas, áudios e conteúdos pensados para a saúde emocional de mães. 
                     O tratamento foi desenvolvido para reduzir sintomas de tristeza e ansiedade e melhorar o bem-estar no dia a dia.
                 </p>
                 <p>
@@ -357,28 +357,32 @@
         </div>
     </section>
 
-    <!-- Transição 2: No final de tudo (Antes do novo bloco institucional) -->
-    <div class="w-full bg-white">
+    <!-- Transição 2: Preparando para o Bloco Institucional Roxo -->
+    <div class="w-full bg-motherly-purple">
         <img src="assets/img/transition2.png" alt="Transição Final" class="img-block">
     </div>
 
-    <!-- Novo Bloco: Realização e Apoio (Fundo Branco) -->
-    <section class="bg-white py-16 px-4 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-0 justify-between items-stretch">
+    <!-- Novo Bloco: Realização e Apoio (Fundo Roxo com Bloco Branco Arredondado) -->
+    <section class="bg-motherly-purple pb-24 px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-[3rem] p-8 md:p-16 shadow-xl flex flex-col gap-16">
             
-            <!-- Sessão Realização -->
-            <div class="flex-1 flex flex-col items-center justify-center text-center md:border-r border-gray-200 px-6">
-                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase mb-6">Realização</h3>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-10">
+            <!-- Sessão Realização (Acima) -->
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-10 text-motherly-purple">Realização</h2>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
                     <img src="assets/img/HC.png" alt="Hospital das Clínicas" class="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-all">
                     <img src="assets/img/ifmusp.png" alt="FMUSP" class="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-all">
                     <img src="assets/img/lim.png" alt="LIM" class="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-all">
+                    <img src="assets/img/ipq.png" alt="IPq" class="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-all">
                 </div>
             </div>
             
-            <!-- Sessão Apoio -->
-            <div class="flex-1 flex flex-col items-center justify-center text-center px-6">
-                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase mb-6">Apoio</h3>
+            <!-- Divisor Sutil Interno -->
+            <div class="border-t border-purple-100 max-w-xl mx-auto w-full"></div>
+            
+            <!-- Sessão Apoio (Abaixo) -->
+            <div class="text-center">
+                <h2 class="text-4xl font-bold mb-10 text-motherly-purple">Apoio</h2>
                 <div class="flex justify-center items-center">
                     <img src="assets/img/cism.png" alt="CISM" class="h-14 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-all">
                 </div>
@@ -387,8 +391,8 @@
         </div>
     </section>
 
-    <!-- 1 - Footer (Seguindo o padrão do Menu com texto creme) -->
-    <footer class="py-12 bg-motherly-purple px-4 text-motherly-creme">
+    <!-- 1 - Footer (Mantido no padrão roxo integrado) -->
+    <footer class="py-12 bg-motherly-purple px-4 text-motherly-creme border-t border-purple-400/20">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             
             <!-- Logo no Footer -->
@@ -427,7 +431,6 @@
         // Carrossel Equipe Ajustado para Mobile e Desktop
         function scrollCarousel(direction) {
             const track = document.getElementById('carousel-track');
-            // No mobile ele rola a largura do card único, no desktop rola dinamicamente
             const scrollAmount = window.innerWidth < 768 ? track.querySelector('div').clientWidth + 32 : track.clientWidth; 
             track.scrollBy({
                 left: direction * scrollAmount,
